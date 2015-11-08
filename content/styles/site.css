@@ -5,6 +5,14 @@ body {
     background-repeat: no-repeat;
 }
 
+.navbar-header a.navbar-brand {
+    padding-top: 27px;
+}
+
+.navbar-right {
+    padding-top: 15px;
+}
+
 .profile-picture {
     width: 70px;
     height: auto;
