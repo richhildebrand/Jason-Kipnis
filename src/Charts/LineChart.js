@@ -36,7 +36,14 @@ function () {
             "valueAxes": [{
                 "axisAlpha": 0.2,
                 "dashLength": 1,
-                "position": "left"
+                "position": "left",
+                "precision": 3,
+                "labelFunction": function(obj, value) {
+                    if (value == 0) {
+                        return ".000";
+                    }
+                    return "." + value;
+                }
             }],
             "mouseWheelZoomEnabled": true,
             "graphs": [{
