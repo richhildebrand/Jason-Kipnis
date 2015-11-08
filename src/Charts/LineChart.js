@@ -36,7 +36,8 @@ function () {
             "valueAxes": [{
                 "axisAlpha": 0.2,
                 "dashLength": 1,
-                "position": "left"
+                "position": "left",
+                "precision": 3
             }],
             "mouseWheelZoomEnabled": true,
             "graphs": [{
