@@ -37,11 +37,15 @@ function () {
                 "axisAlpha": 0.2,
                 "dashLength": 1,
                 "position": "left",
-                "precision": 3,
                 "labelFunction": function(obj, value) {
-                    if (value == 0) {
-                        return ".000";
+                    if (value.length === 2) {
+                        return ".0" + value;
                     }
+
+                    if (value.length === 1) {
+                        return ".00" + value;
+                    }
+                    
                     return "." + value;
                 }
             }],
@@ -55,8 +59,6 @@ function () {
                 "hideBulletsCount": 50,
                 "title": "red line",
                 "valueField": vertialAxis,
-                "decimals": 3,
-                "forceDecimals": 1,
                 "useLineColorForBulletBorder": true
             }],
             "chartScrollbar": {
