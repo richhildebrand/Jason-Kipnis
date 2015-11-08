@@ -22,6 +22,20 @@
     </section>
 
     <section class="container content">
+        <section class="graph-container">
+            <div class="graph-selector">
+                <label>Graph: </label>
+                <select data-role="dropdownlist"
+                        data-bind="events: { change: lineChartObservable.updateVertialAxis,
+                                   value: lineChartObservable.vertialAxisValue">
+                       <option value="BA">Batting Average</option>
+                       <option value="OBP">On Base Percentage</option>
+                       <option value="SLG">Slugging</option>
+                       <option value="OPS">On Base Plus Slugging</option>
+                </select>
+            </div>
+            <div class="chart" id="allPlayerDataChart"></div>
+        </section>
     </section>
 
     <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
