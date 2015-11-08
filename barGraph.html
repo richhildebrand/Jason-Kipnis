@@ -22,6 +22,35 @@
     </section>
 
     <section class="container content">
+        <section class="graph-container">
+            <div class="graph-selector">
+                <label>Group By: </label>
+                <select data-role="dropdownlist"
+                        data-bind="events: { change: barChartObservable.updateSingleAxis,
+                                   value: barChartObservable.singleAxisValue">
+                       <option value="Month">Month</option>
+                       <option value="BOP">Batting Order Position</option>
+                       <option value="Opp">Opponent</option>
+                </select>
+            </div>
+            <div class="graph-selector multiselect">
+                <label>Show Categories: </label>
+                <select data-role="multiselect"
+                        data-bind="events: { change: barChartObservable.updateMultiAxis },
+                                   value: barChartObservable.multiAxisValues">
+                        <option value="AB">At Bats</option>
+                        <option value="RBI">Runs Batted In</option>
+                        <option  value="H">Hits</option>
+                        <option value="2B">Doubles</option>
+                        <option value="3B">Triples</option>
+                        <option value="HR">Home Runs</option>
+                        <option value="SO">Strike Outs</option>
+                        <option value="SB">Steals</option>
+                        <option value="SC">Times Caught Stealing</option>
+                </select>
+            </div>
+            <div class="chart" id="barChart"></div>
+        </section>
     </section>
 
     <script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
