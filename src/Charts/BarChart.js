@@ -1,4 +1,4 @@
-define(['DataFormatter'],
+define(['DataFormatters/DataFormatter'],
 function (DataFormatter) {
     'use strict';
 
